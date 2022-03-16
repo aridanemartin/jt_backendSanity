@@ -1,11 +1,11 @@
 {
   "root": true,
-  "project": {
-    "name": "jt-nextjs"
-  },
   "api": {
     "projectId": "6yfev950",
     "dataset": "production"
+  },
+  "project": {
+    "name": "jt-nextjs"
   },
   "plugins": [
     "@sanity/base",
