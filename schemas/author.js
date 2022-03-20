@@ -83,14 +83,7 @@ export default {
       title: 'Bio',
       type: 'array',
       group: 'ficha',
-      of: [
-        {
-          title: 'Block',
-          type: 'block',
-          styles: [{title: 'Normal', value: 'normal'}],
-          lists: [],
-        },
-      ],
+      of: [{type: 'block'}]
     },
     {
       name: 'web',
@@ -165,8 +158,9 @@ export default {
     {
       name: 'servicio1Description',
       title: 'Servicio 1 - Descripción',
-      type: 'string',
-      group: 'servicio1'
+      type: 'array',
+      group: 'servicio1',
+      of: [{type: 'block'}]
     },
     {
       name: 'servicio1Link',
@@ -204,8 +198,9 @@ export default {
     {
       name: 'servicio2Description',
       title: 'Servicio 2 - Descripción',
-      type: 'string',
-      group: 'servicio2'
+      type: 'array',
+      group: 'servicio2',
+      of: [{type: 'block'}]
     },
     {
       name: 'servicio2Link',
@@ -242,9 +237,10 @@ export default {
     },
     {
       name: 'servicio3Description',
-      title: 'servicio 3 - Descripción',
-      type: 'string',
-      group: 'servicio3'
+      title: 'Servicio 3 - Descripción',
+      type: 'array',
+      group: 'servicio3',
+      of: [{type: 'block'}]
     },
     {
       name: 'servicio3Link',
@@ -282,8 +278,9 @@ export default {
     {
       name: 'servicio4Description',
       title: 'Servicio 4 - Descripción',
-      type: 'string',
-      group: 'servicio4'
+      type: 'array',
+      group: 'servicio4',
+      of: [{type: 'block'}]
     },
     {
       name: 'servicio4Link',
@@ -321,8 +318,9 @@ export default {
     {
       name: 'servicio5Description',
       title: 'Servicio 5 - Descripción',
-      type: 'string',
-      group: 'servicio5'
+      type: 'array',
+      group: 'servicio5',
+      of: [{type: 'block'}]
     },
     {
       name: 'servicio5Link',
