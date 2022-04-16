@@ -339,6 +339,15 @@ export default {
       group: 'servicio5'
     },
     {
+      name: 'servicio6Image',
+      title: 'Servicio 6 - Imagen',
+      type: 'image',
+      group: 'servicio6',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
       name: 'servicio6Title',
       title: 'Servicio 6 - Título que aparecerá',
       type: 'string',
