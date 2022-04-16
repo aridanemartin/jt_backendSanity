@@ -35,6 +35,10 @@ export default {
       name: 'servicio5',
       title: 'Servicio 5'
     },
+    {
+      name: 'servicio6',
+      title: 'Servicio 6'
+    }
 
   ],
   fields: [
@@ -151,7 +155,7 @@ export default {
     },
     {
       name: 'servicio1Duration',
-      title: 'Servicio 1 - Duración',
+      title: 'Servicio 1 - Duración (Escribir solo el número de minutos)',
       type: 'string',
       group: 'servicio1'
     },
@@ -170,7 +174,7 @@ export default {
     },
     {
       name: 'servicio1Precio',
-      title: 'Servicio 1 - Precio en €',
+      title: 'Servicio 1 - Precio en € (Escribir solo el número)',
       type: 'number',
       group: 'servicio1'
     },
@@ -191,7 +195,7 @@ export default {
     },
     {
       name: 'servicio2Duration',
-      title: 'Servicio 2 - Duración',
+      title: 'Servicio 2 - Duración (Escribir solo el número de minutos)',
       type: 'string',
       group: 'servicio2'
     },
@@ -210,7 +214,7 @@ export default {
     },
     {
       name: 'servicio2Precio',
-      title: 'Servicio 2 - Precio en €',
+      title: 'Servicio 2 - Precio en € (Escribir solo el número)',
       type: 'number',
       group: 'servicio2'
     },
@@ -231,7 +235,7 @@ export default {
     },
     {
       name: 'servicio3Duration',
-      title: 'Servicio 3 - Duración',
+      title: 'Servicio 3 - Duración (Escribir solo el número de minutos)',
       type: 'string',
       group: 'servicio3'
     },
@@ -250,7 +254,7 @@ export default {
     },
     {
       name: 'servicio3Precio',
-      title: 'servicio 3 - Precio en €',
+      title: 'servicio 3 - Precio en € (Escribir solo el número)',
       type: 'number',
       group: 'servicio3'
     },
@@ -271,7 +275,7 @@ export default {
     },
     {
       name: 'servicio4Duration',
-      title: 'Servicio 4 - Duración',
+      title: 'Servicio 4 - Duración (Escribir solo el número de minutos)',
       type: 'string',
       group: 'servicio4'
     },
@@ -290,7 +294,7 @@ export default {
     },
     {
       name: 'servicio4Precio',
-      title: 'Servicio 4 - Precio en €',
+      title: 'Servicio 4 - Precio en € (Escribir solo el número)',
       type: 'number',
       group: 'servicio4'
     },
@@ -311,7 +315,7 @@ export default {
     },
     {
       name: 'servicio5Duration',
-      title: 'Servicio 5 - Duración',
+      title: 'Servicio 5 - Duración en minutos (Escribir solo el número de minutos)',
       type: 'string',
       group: 'servicio5'
     },
@@ -330,9 +334,40 @@ export default {
     },
     {
       name: 'servicio5Precio',
-      title: 'Servicio 5 - Precio en €',
+      title: 'Servicio 5 - Precio en € (Escribir solo el número)',
       type: 'number',
       group: 'servicio5'
+    },
+    {
+      name: 'servicio6Title',
+      title: 'Servicio 6 - Título que aparecerá',
+      type: 'string',
+      group: 'servicio6'
+    },
+    {
+      name: 'servicio6Duration',
+      title: 'Servicio 6 - Duración en minutos (Escribir solo el número de minutos)',
+      type: 'string',
+      group: 'servicio6'
+    },
+    {
+      name: 'servicio6Description',
+      title: 'Servicio 6 - Descripción',
+      type: 'array',
+      group: 'servicio6',
+      of: [{type: 'block'}]
+    },
+    {
+      name: 'servicio6Link',
+      title: 'Servicio 6 - Link Calendly',
+      type: 'string',
+      group: 'servicio6'
+    },
+    {
+      name: 'servicio6Precio',
+      title: 'Servicio 6 - Precio en € (Escribir solo el número)',
+      type: 'number',
+      group: 'servicio6'
     },
     {
       name: 'comentario1',
