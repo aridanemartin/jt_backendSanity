@@ -536,7 +536,7 @@ export default {
         modal: { type: "popover" },
       },
       fields: [
-        { name: "title", type: "string", title: "Street name" },
+        { name: "title", type: "string", title: "Título" },
         { name: "description", type: "string", title: "Descripción" },
         { name: "link", type: "string", title: "Link" },
         {
@@ -560,7 +560,7 @@ export default {
         modal: { type: "popover" },
       },
       fields: [
-        { name: "title", type: "string", title: "Street name" },
+        { name: "title", type: "string", title: "Título" },
         { name: "description", type: "string", title: "Descripción" },
         { name: "link", type: "string", title: "Link" },
         {
@@ -584,7 +584,7 @@ export default {
         modal: { type: "popover" },
       },
       fields: [
-        { name: "title", type: "string", title: "Street name" },
+        { name: "title", type: "string", title: "Título" },
         { name: "description", type: "string", title: "Descripción" },
         { name: "link", type: "string", title: "Link" },
         {
