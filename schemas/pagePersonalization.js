@@ -7,6 +7,10 @@ export default {
       name: "principal",
       title: "Página Principal",
     },
+    {
+      name: "contact",
+      title: "Página de contacto",
+    },
   ],
   fields: [
     {
@@ -54,6 +58,53 @@ export default {
           options: {
             hotspot: true,
           },
+        },
+      ],
+    },
+    {
+      title: "Dirección de consulta",
+      name: "address",
+      type: "object",
+      group: "contact",
+      options: {
+        collapsible: true,
+        collapsed: false,
+        modal: { type: "popover" },
+      },
+      fields: [
+        {
+          name: "address1",
+          type: "string",
+          title: "Dirección (Calle)",
+          required: true,
+        },
+        {
+          name: "address2",
+          type: "string",
+          title: "Planta, puerta...",
+          required: true,
+        },
+        {
+          name: "providence",
+          type: "string",
+          title: "Provincia",
+          required: true,
+        },
+        {
+          name: "zipCode",
+          type: "string",
+          title: "Código Postal",
+          required: true,
+        },
+        {
+          name: "phone",
+          type: "string",
+          title: "Teléfono",
+        },
+        {
+          name: "mail",
+          type: "string",
+          title: "Email",
         },
       ],
     },

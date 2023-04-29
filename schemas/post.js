@@ -13,6 +13,15 @@ export default {
       required: true,
     },
     {
+      name: "description",
+      title:
+        "Descripción (Resumen que se mostrará en la página principal y sección de blog)",
+      description:
+        "haz una breve descripción de no más de dos líneas del artículo o utiliza las dos primeras líneas seguidas de 3 puntos",
+      type: "text",
+      required: true,
+    },
+    {
       name: "timeToRead",
       title: "Tiempo De Lectura",
       description:
@@ -112,14 +121,7 @@ export default {
       type: "reference",
       to: { type: "author" },
     },
-    {
-      name: "description",
-      title: "Descripción (Resumen) CAMPO OBLIGATORIO",
-      description:
-        "haz una breve descripción de no más de dos líneas del artículo o utiliza las dos primeras líneas seguidas de 3 puntos",
-      type: "string",
-      required: true,
-    },
+
     {
       name: "mainImage",
       title: "Imagen de portada",
@@ -140,11 +142,6 @@ export default {
       name: "publishedAt",
       title: "Published at",
       type: "datetime",
-    },
-    {
-      name: "body3",
-      title: "Párrafo 3",
-      type: "blockContent",
     },
   ],
 
