@@ -1,103 +1,164 @@
 export default {
-  name: 'post',
-  title: 'Post',
-  type: 'document',
+  name: "post",
+  title: "Post",
+  type: "document",
   initialValue: () => ({
     publishedAt: new Date().toISOString(),
   }),
   fields: [
     {
-      name: 'title',
-      title: 'Title',
-      type: 'string',
+      name: "title",
+      title: "Título del post",
+      type: "string",
+      required: true,
     },
     {
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
+      name: "timeToRead",
+      title: "Tiempo De Lectura",
+      description:
+        "Tiempo aproximado que tardará el lector en leer el artículo (Introducir solo el número de minutos) Ejemplo ===> 3",
+      type: "string",
+      required: true,
+    },
+    {
+      name: "body",
+      title: "POST",
+      description:
+        "Aquí puedes insertar tanto imágenes como texto. Recuerda que las imágenes deberán estar en modo HORIZONTAL y deben contener una descripción de aprox 125 carácteres",
+      type: "array",
+      required: true,
+      of: [
+        {
+          type: "block",
+        },
+        {
+          name: "enrichedImage",
+          title: "Imagen Horizontal",
+          type: "object",
+          fields: [
+            {
+              name: "image",
+              type: "image",
+              title: "Añadir imagen",
+              options: {
+                hotspot: true,
+              },
+            },
+            {
+              name: "alt",
+              type: "string",
+              title: "Texto alternativo",
+              description:
+                "Describe el contenido de la imagen para ayudar a mejorar la accesibilidad.",
+            },
+          ],
+        },
+        {
+          name: "enrichedImageVertical",
+          title: "Imagen Vertical",
+          type: "object",
+          fields: [
+            {
+              name: "image",
+              type: "image",
+              title: "Añadir imagen",
+              options: {
+                hotspot: true,
+              },
+            },
+            {
+              name: "alt",
+              type: "string",
+              title: "Texto alternativo",
+              description:
+                "Describe el contenido de la imagen para ayudar a mejorar la accesibilidad.",
+            },
+          ],
+        },
+        {
+          name: "youtubeVideo",
+          type: "object",
+          title: "YouTube Video",
+          fields: [
+            {
+              name: "url",
+              type: "url",
+              title: "YouTube Video URL",
+              validation: (Rule) =>
+                Rule.uri({
+                  scheme: ["https"],
+                  allowRelative: false,
+                  message:
+                    "Por favor introduce una URL que empiece por https://www...",
+                }),
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "slug",
+      title: "Slug",
+      type: "slug",
+      required: true,
       options: {
-        source: 'title',
+        source: "title",
         maxLength: 96,
       },
     },
     {
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: {type: 'author'},
+      name: "author",
+      title: "Author",
+      type: "reference",
+      to: { type: "author" },
     },
     {
-      name: 'description',
-      title: 'Descripción (Resumen) CAMPO OBLIGATORIO',
-      description: 'haz una breve descripción de no más de dos líneas del artículo o utiliza las dos primeras líneas seguidas de 3 puntos',
-      type: 'string',
+      name: "description",
+      title: "Descripción (Resumen) CAMPO OBLIGATORIO",
+      description:
+        "haz una breve descripción de no más de dos líneas del artículo o utiliza las dos primeras líneas seguidas de 3 puntos",
+      type: "string",
+      required: true,
     },
     {
-      name: 'mainImage',
-      title: 'Imagen de portada',
-      description: 'CAMPO OBLIGATORIO',
-      type: 'image',
+      name: "mainImage",
+      title: "Imagen de portada",
+      description: "CAMPO OBLIGATORIO",
+      type: "image",
+      required: true,
       options: {
         hotspot: true,
       },
     },
     {
-      name: 'body1',
-      title: 'Párrafo 1',
-      description: 'CAMPO OBLIGATORIO, no añadir imagenes aquí',
-      type: 'blockContent',
+      name: "categories",
+      title: "Categories",
+      type: "array",
+      of: [{ type: "reference", to: { type: "category" } }],
     },
     {
-      name: 'articleImage1',
-      title: 'Imagen 1 (Opcional)',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
+      name: "publishedAt",
+      title: "Published at",
+      type: "datetime",
     },
     {
-      name: 'body2',
-      title: 'Párrafo 2 (Opcional)',
-      description: 'no añadir imagenes aquí',
-      type: 'blockContent',
-    },
-    {
-      name: 'articleImage2',
-      title: 'Imagen 2 (Opcional)',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-    },
-    {
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
-    },
-    {
-      name: 'publishedAt',
-      title: 'Published at',
-      type: 'datetime',
-    },
-    {
-      name: 'body3',
-      title: 'Párrafo 3',
-      type: 'blockContent',
+      name: "body3",
+      title: "Párrafo 3",
+      type: "blockContent",
     },
   ],
 
   preview: {
     select: {
-      title: 'title',
-      author: 'author.name',
-      media: 'mainImage',
+      title: "title",
+      author: "author.name",
+      media: "mainImage",
     },
     prepare(selection) {
-      const {author} = selection
+      const { author } = selection;
       return Object.assign({}, selection, {
         subtitle: author && `by ${author}`,
-      })
+      });
     },
   },
-}
+};
