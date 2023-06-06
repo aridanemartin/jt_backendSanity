@@ -62,6 +62,43 @@ export default {
       ],
     },
     {
+      title: "Imágen de la presentación",
+      description:
+        "Imagen que se mostrará en la sección de presentación que se encuentra justo debajo del banner principal",
+      name: "introImage",
+      type: "object",
+      group: "principal",
+      options: {
+        collapsible: true,
+        collapsed: false,
+        modal: { type: "popover" },
+      },
+      fields: [
+        {
+          name: "imageDesktop",
+          title: "Imagen para la versión de escritorio",
+          description:
+            "Recuerda que la imagen debe ser alargada y no cuadrada y no deberá contener texto, después de subirla recuerda comprobar que se vea bien tanto en móvil como en desktop",
+          type: "image",
+
+          options: {
+            hotspot: true,
+          },
+        },
+        {
+          name: "imageMobile",
+          title: "Imagen para la versión móvil",
+          description:
+            "Recuerda que la imagen debe ser alargada y no cuadrada y no deberá contener texto, después de subirla recuerda comprobar que se vea bien tanto en móvil como en desktop",
+          type: "image",
+
+          options: {
+            hotspot: true,
+          },
+        },
+      ],
+    },
+    {
       title: "Dirección de consulta",
       name: "address",
       type: "object",
