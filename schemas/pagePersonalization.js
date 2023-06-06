@@ -108,6 +108,29 @@ export default {
         },
       ],
     },
+    {
+      title: "Sección 'Trabaja con nosotros'",
+      name: "workWithUs",
+      type: "object",
+      group: "contact",
+      options: {
+        collapsible: true,
+        collapsed: false,
+        modal: { type: "popover" },
+      },
+      fields: [
+        {
+          title: "Activar el botón 'Trabaja con nosotros'",
+          name: "isWorkWithUsEnabled",
+          type: "boolean",
+        },
+        {
+          title: "Email de contacto",
+          name: "workWithUsEmail",
+          type: "string",
+        },
+      ],
+    },
   ],
   preview: {
     select: {
